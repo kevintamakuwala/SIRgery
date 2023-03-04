@@ -1,0 +1,124 @@
+.main__header {
+    width: 100vw;
+    height: calc(100vh-5rem);
+    display: grid;
+    place-items: center;
+    margin-top: 5rem;
+}
+
+.main__header-container {
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4rem;
+}
+
+.main__header-left h4 {
+    margin-bottom: 1rem;
+    color: var(--color-secondary);
+    font-weight: 400;
+}
+
+.main__header-left p {
+    margin: 1rem 0 3.5rem;
+    font-size: 1.1rem;
+}
+
+.main__header-right {
+    display: grid;
+    place-items: center;
+    position: relative;
+
+}
+
+.main__header-circle {
+    width: 25rem;
+    height: 25rem;
+    background: linear-gradient(75deg, var(--color-secondary), transparent);
+    border-radius: 50%;
+    position: absolute;
+    filter: blur(70px);
+    transition: var(--transition);
+}
+
+.main__header-image {
+    position: relative;
+}
+
+.main__header-right:hover .main__header-circle {
+    filter: blur(55px);
+}
+
+
+/* PROGRAMS */
+.programs {
+    margin-top: 4rem;
+
+}
+
+.programs__wrapper {
+    display: flex;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 3rem;
+    margin-top: 4rem;
+
+}
+
+.programs__program a {
+    margin-top: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.programs__program:hover a, .programs__program .sm:hover {
+    background: var(--color-secondary);
+    color: var(--color-gray-500);
+}
+
+@media screen and (max-width:1024px) {
+    .programs__wrapper {
+        flex-direction: column;
+    }
+}
+
+/* Values */
+.values__container {
+    display: grid;
+    grid-template-columns: 38% 50%;
+    gap: 12%;
+}
+
+.values__image {
+    filter: saturate(0.25);
+    transition: var(--transition);
+}
+
+.values__image:hover {
+    filter: saturate(1);
+}
+
+.values__right>p {
+    margin: 1.5rem 0 5rem;
+}
+
+.values__wrapper {
+    display: grid;
+    margin-top: 3.5rem;
+    grid-template-columns: 1fr 1fr;
+    gap: 3.4rem 2.4rem;
+}
+
+.card.values__value {
+    padding-top: 3.5rem;
+    text-align: left;
+    position: relative;
+}
+
+.card.values__value span {
+    position: absolute;
+    top: -1.5rem;
+
+}
